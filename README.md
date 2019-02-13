@@ -166,5 +166,30 @@ function timeConversion($s) {
 }
 ```
 
+- [Grading Students](https://www.hackerrank.com/challenges/grading/problem "Grading Students")
+```php
+function gradingStudents($grades) {
+     $MODULO = 5;
+     $finalGrades = [];
+
+     $finalGrades = array_map(function($grade) use ($MODULO){
+         // get the next multiplier by 5
+         $nextMultiplier = $grade + ($MODULO - $grade % $MODULO);
+         $difference = $nextMultiplier - $grade;
+         // do not round up if grade less than 40 
+         // the difference is 3 and greater than 3
+         if($nextMultiplier < 40 || $difference === 3 || $difference > 3){
+             return $grade;
+         }
+         
+         // round up if the difference is less than 3
+         return $nextMultiplier;
+     }, $grades);
+
+     return $finalGrades;
+}
+```
+
+
 
 
