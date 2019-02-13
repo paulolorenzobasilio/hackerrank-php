@@ -146,7 +146,7 @@ function miniMaxSum($arr) {
     echo array_sum($minSumArr) . ' ' . array_sum($maxSumArr);
 }
 ```
-- [Birthday Cake Candles](https://www.hackerrank.com/challenges/mini-max-sum/problem "Birthday Cake Candles")
+- [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem "Birthday Cake Candles")
 ```php
 function birthdayCakeCandles($ar) {
    // count the recurring of the candle
@@ -155,6 +155,14 @@ function birthdayCakeCandles($ar) {
    krsort($candles);
    $candlesBlowsValue = array_values($candles);
    return $candlesBlowsValue[0];
+}
+```
+
+- [Time Conversion](https://www.hackerrank.com/challenges/time-conversion/problem "Time Conversion")
+```php
+function timeConversion($s) {
+    $strToTime = strtotime($s);
+    return date('H:i:s', $strToTime);
 }
 ```
 
